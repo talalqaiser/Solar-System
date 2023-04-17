@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <link href="main.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <title>A3 - Solar System</title>
+</head>
+
+<body style="background-color:rgb(216, 238, 215);" onload="main()">
+    <div>
+        <div>
+            <h2 style="text-align: center;"><b>Solar System</b></h2>
+            <h4 style="text-align: center;">Use keyboard keys 'w', 'a', 's', 'd', to move around</h4><br>
+        </div>   
+
+        <canvas id="webgl" class="col-md" width="1850" height="600">
+
+            Please use a browser that supports "canvas"
+        </canvas>
+
+        <div class="form-group" style="padding-top: 1%;">
+            <label style="font-size:1.25vw" for="SimSpeed"><b>Simulation Speed:</b></label>
+            <input type="range" min="1" max="86400" value="3600" class="slider" id="SimSpeed"
+                onclick="calculateSimSpeed()">
+        </div>
+    </div>
+
+    <script src="../lib/webgl-utils.js"></script>
+    <script src="../lib/webgl-debug.js"></script>
+    <script src="../lib/cuon-utils.js"></script>
+    <script src="../lib/cuon-matrix.js"></script>
+    <script src="../index.js"></script>
+</body>
+
+</html>
